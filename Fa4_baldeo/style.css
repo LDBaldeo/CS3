@@ -1,0 +1,55 @@
+html {
+	
+	color:rgb(199, 177, 14);
+	font-family:fantasy;
+}
+
+#h1{
+	position: relative;
+	margin-top: 220px;
+	margin-top: 30px;
+	margin-left: 25px;
+	position: fixed;
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	
+}
+#landscape{
+	margin-top: 20px;
+	margin-left: 10px;
+	width: 250px;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+}
+
+#winston{
+	margin-top: 150px;
+	margin-left: 20px;
+	width: 40px;
+	height: 40px;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+}
+
+#hopper{
+	margin-top: 30px;
+	margin-left: 200px;
+	width: 50px;
+	z-index: 3;
+	position: absolute;
+	top: 0;
+}
+
+
+#song{
+	position: relative;
+	margin-top: 220px;	
+	clear: both;
+}
+div{
+	overflow: auto;
+}	
+
