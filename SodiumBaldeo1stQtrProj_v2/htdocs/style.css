@@ -7,7 +7,7 @@
 .banner{
 	width: 100%;
 	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/Images/background.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(CS3/SodiumBaldeo1stQtrProj_v2/Images/.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: repeat;
@@ -200,7 +200,7 @@
 .chessPawn{
 	width: 100%;
 	height: 100vh;
-	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/Images/pawn.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(CS3/SodiumBaldeo1stQtrProj_v2/Images/.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: repeat;
