@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>  </title> 
+			<meta charset="UTF-8"> 
+			<meta name="author" content="Lorenz Baldeo"> 
+			<meta name="keywords" content="HTML, CSS, JavaScript"> 
+			<link rel="icon" href="icon.png" type="image/gif">
+			<style>
+				
+				*{
+					text-decoration: none;
+					font-size: 32px;
+					padding: 10px;
+					margin: 5px;
+				}
+				
+				.link1:link{
+					color: white;
+					background-color: purple;
+				}
+				
+				.link1:visited {
+					color: white;
+					background-color: orange;
+				}
+				
+				.link1:focus {
+					color: red;
+					background-color: white;
+				}
+				
+				.link1:active {
+					color: green;
+					background-color: green;
+				}
+				
+				.link1:hover {
+					color: yellow;
+					background-color: red;
+				}
+				
+				.link2:link {
+					color: white;
+					background-color: red;
+				}
+				
+				.link2:visited {
+					color: white;
+					background-color: gray;
+				}
+				
+				.link2:hover {
+					color: yellow;
+					background-color: green;
+				}
+
+				.link2:active{
+					color: green;
+					background-color: gray;
+				}
+				
+				
+				div {
+					border: 2px solid black;
+					width: 100px;
+					height 100px;
+					padding: 10px;
+				}
+
+				div:target#div1 {
+					background-color: blue;
+					color: yellow;
+				
+				}
+				
+				div:target#div2{
+					background-color: aqua;
+					color: yellow;
+					border: 10px dotted green;
+				
+				
+				
+				}
+				
+				
+
+
+			</style>
+	</head>
+	<body>
+		
+		
+
+		<a class="link1" href="#div1"> First Link </a>
+		<a class="link2" href="#div2"> Second Link </a>
+		<br/> <br/>
+
+		<div id="div1"> Div 1 Here</div>
+		<br/>
+		<div id="div2"> Div 2 Here </div>
+		
+		
+</body>
+</html>
