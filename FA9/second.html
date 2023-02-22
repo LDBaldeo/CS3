@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>  </title> 
+			<meta charset="UTF-8"> 
+			<meta name="author" content="Lorenz Baldeo"> 
+			<meta name="keywords" content="HTML, CSS, JavaScript"> 
+			<link rel="icon" href="icon.png" type="image/gif"> 
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+		<style>
+			* {
+				text-align: left;
+			}
+			
+			img {
+			padding: left;
+				width: 50vh;
+				height: 70vh;
+			
+			}
+			
+			.btn {
+				position: relative;
+				top: -67vh;
+				right: -35vh;
+			}
+			
+			img {
+				position: relative;
+				top: 5vh;
+			}
+			
+		</style>
+	
+	</head>
+	
+	<body>
+		<button class="btn" onclick="firstImage()"> Image1 </button>		
+		<button class="btn" onclick="secondImage()"> Image2 </button>
+			
+		<img id="image" src="">
+
+		
+		<script>
+			function firstImage() {
+				document.getElementById("image").src = "image/king.jpg";
+			
+			}
+			function secondImage() {
+				document.getElementById("image").src = "image/king2.jpg";
+			
+			}
+		
+		
+		</script>
+	
+	</body>
+</html>
