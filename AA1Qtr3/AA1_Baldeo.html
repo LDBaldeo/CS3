@@ -108,18 +108,18 @@
 			function rock(){
 			
 				function checkWinner(){ 
-					document.getElementById("playerChoice").src = "Images/0.PNG";
+					document.getElementById("playerChoice").src = "Images/0.png";
 					var random = randomComputer();
 					if(random==1) {
-						document.getElementById("computerChoice").src ="Images/0.PNG";
+						document.getElementById("computerChoice").src ="Images/0.png";
 					}
 					if(random==2) {
-						document.getElementById("computerChoice").src ="Images/1.PNG";
+						document.getElementById("computerChoice").src ="Images/1.png";
 						cscore = cscore + 1;
 						document.getElementById("cScore").innerHTML = cscore;
 					}
 					if(random==3) {
-						document.getElementById("computerChoice").src ="Images/2.PNG";
+						document.getElementById("computerChoice").src ="Images/2.png";
 						pscore = pscore + 1;
 						document.getElementById("pScore").innerHTML = pscore;
 					}
@@ -131,19 +131,19 @@
 			function paper(){
 			
 				function checkWinner(){ 
-					document.getElementById("playerChoice").src = "Images/1.PNG";
+					document.getElementById("playerChoice").src = "Images/1.png";
 					var random = randomComputer();
 					if(random==1) {
-						document.getElementById("computerChoice").src ="Images/0.PNG";
+						document.getElementById("computerChoice").src ="Images/0.png";
 						pscore = pscore + 1;
 						document.getElementById("pScore").innerHTML = pscore;					
 					}
 					if(random==2) {
-						document.getElementById("computerChoice").src ="Images/1.PNG";
+						document.getElementById("computerChoice").src ="Images/1.png";
 
 					}
 					if(random==3) {
-						document.getElementById("computerChoice").src ="Images/2.PNG";
+						document.getElementById("computerChoice").src ="Images/2.png";
 						cscore = cscore + 1;
 						document.getElementById("cScore").innerHTML = cscore;
 					}
@@ -156,20 +156,20 @@
 			
 				
 				function checkWinner() {
-					document.getElementById("playerChoice").src = "Images/2.PNG";
+					document.getElementById("playerChoice").src = "Images/2.png";
 					var random = randomComputer();
 					if(random==1) {
-						document.getElementById("computerChoice").src ="Images/0.PNG";
+						document.getElementById("computerChoice").src ="Images/0.png";
 						cscore = cscore + 1;
 						document.getElementById("cScore").innerHTML = cscore;					
 					}
 					if(random==2) {
-						document.getElementById("computerChoice").src ="Images/1.PNG";
+						document.getElementById("computerChoice").src ="Images/1.png";
 						pscore = pscore + 1;
 						document.getElementById("pScore").innerHTML = pscore;
 					}
 					if(random==3) {
-						document.getElementById("computerChoice").src ="Images/2.PNG";
+						document.getElementById("computerChoice").src ="Images/2.png";
 
 					}
 			}
