@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>  </title> 
+			<meta charset="UTF-8"> 
+			<meta name="author" content="Lorenz Baldeo"> 
+			<meta name="keywords" content="HTML, CSS, JavaScript"> 
+			<link rel="icon" href="icon.png" type="image/gif"> 
+	</head>
+	<body>
+
+		
+		
+	<script>
+		var randomNum = Math.floor(Math.random()*1001);	
+		var stringNum = randomNum.toString();	
+		var ones = 0;
+		var tens = 0;
+		var hundreds = 0; 
+		
+		document.write(randomNum, "<br/>");
+		
+		if(stringNum.length == 3){
+			document.write(" <br/> Breakdown: ", stringNum[0], "00, ", stringNum[1], "0, ", stringNum[2]);
+		}
+		else if(stringNum.length == 2){
+			document.write(" <br/> Breakdown: 0, ", stringNum[0], "0, ", stringNum[1]);
+		}
+		else if(stringNum.length == 1){
+			document.write(" <br/> Breakdown: 0, 0, ", stringNum[0]);
+		}
+		
+		
+		
+	</script>
+	</body>
+</html>
