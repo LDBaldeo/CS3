@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>  </title> 
+			<meta charset="UTF-8"> 
+			<meta name="author" content="Lorenz Baldeo"> 
+			<meta name="keywords" content="HTML, CSS, JavaScript"> 
+			<link rel="icon" href="icon.png" type="image/gif"> 
+	</head>
+	<body>	
+	<script>
+		var a = prompt("Enter the length of the first segment: ");
+		var b = prompt("Enter the length of the second segment: ");
+		var c = prompt("Enter the length of the third segment: ");
+		
+		determineTriangle(a,b,c);
+		
+		function determineTriangle(a,b,c){
+			if(a == b && b == c){
+				alert("The triangle is an EQUILATERAL");
+			
+			} else if ((a==b && b!=c)||(b==c && c!=a)||(c==a && a!=b)){
+				alert("The triangle is an ISOSCELES"); 
+			
+			} else {
+				alert("The triange is a SCALENE");
+			}		
+		}	
+	</script>
+
+	</body>
+</html>
