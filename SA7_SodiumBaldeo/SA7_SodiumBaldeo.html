@@ -3,7 +3,6 @@
 	<head>
 		<title>Numerology</title>
 			<meta charset="UTF-8"> 
-			<meta name="author" content="Lorenz Baldeo"> 
 			<meta name="keywords" content="HTML, CSS, JavaScript"> 
 			<link rel="icon" href="icon.png" type="image/gif"> 
         <style>
@@ -25,34 +24,38 @@
     <button onclick="nameInput()"> Click here to enter your name </button>
     <script>
 	
-	<!-- Name Declaration -->
-	var name = "";
+	var userName = "";
 	function nameInput(){
-		name = prompt("Enter your name: ");
-		document.getElementById("thename").innerHTML = name;
+	<!-- Checks whether it's empty or just space -->
+		userName = prompt("Enter your name: ");
+		if (userName == null || userName.trim() == "") {
+			alert("Please enter a valid name");
+			return;
+		}
+		document.getElementById("thename").innerHTML = userName;
 		
-		var nameLength = name.length;
+		<!-- Calculating the Length and Converting it to String -->
+		var nameLength = userName.length;
 		var nameLengthString = nameLength.toString();
 		var numDigits = nameLengthString.length;
 		var sum = 0;
 		
-		<!-- Determines if there are more than 1 digit -->
-		while (numDigits > 1) {
-			sum = 0;
-			
-			for (i = 0; i < numDigits; i++) {
-			sum = sum + parseInt(nameLengthString[i]);
+		<!-- Determines whether there is more than 1 digit -->
+		if (numDigits > 1) {
+			while (numDigits > 1) {
+				sum = 0;
+				
+				for (i = 0; i < numDigits; i++) {
+				sum = sum + parseInt(nameLengthString[i]);
+				}
+				
+				nameLengthString = sum.toString();
+				numDigits = nameLengthString.length;
 			}
-			
-			nameLengthString = sum.toString();
-			numDigits = nameLengthString.length;
 		}
 		
-		<!-- Updating the sum of the strings -->
-		nameLengthString = sum.toString();
 		var finalSum = parseInt(nameLengthString);
-		
-		<!-- Fortune part -->
+		<!-- Fortune Part -->
 		switch(finalSum){
 			case 0:
 				document.getElementById("fortune").innerHTML = "Today is a Lucky Day";
@@ -86,14 +89,8 @@
 				break;
 			default:
 				document.getElementById("fortune").innerHTML = "There seems to be a problem";
+			}
 		}
-		}
-		
-		
-
-		
-		
-    </script>
-    
+	</script>
 </body>
 </html>
