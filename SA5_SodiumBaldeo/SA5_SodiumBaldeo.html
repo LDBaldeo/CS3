@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My Online Shop</title>
+		<meta charset="UTF-8"> 
+		<meta name="author" content="Lorenz Baldeo"> 
+		<meta name="keywords" content="HTML, CSS, JavaScript"> 
+		<link rel="icon" href="icon.png" type="image/gif">
+	<style>
+      span {color: blue; text-decoration:underline}
+      button {width: 100px; padding: 5px; background: pink;}
+	</style>
+
+	</head>
+<body>
+
+	<h1> Welcome to sirJimmy's Warehouse! </h1>
+	<h2> Please select from the following items </h2>
+	<!--- provide your own 3 items and their prices in the list --->
+	<ol>
+		<li>  | Appendix | price: 1000.00 </li>
+		<li>  | Chair    | price: 50.00 </li>
+		<li>  | Laptop   | price: 5000.00 </li>
+	</ol>
+	
+	<!-- the following will be used to display purchase information -->
+    <p> Item selected : <span id="item"> </span> </p>
+	<p> Qty bought : <span id="qty"> </span> </p>
+	<p> Amount to pay for the item: <span id="bill"> </span> </p>
+	<p> Current Total Bill:  <span id="tbill"> </span> </p>
+	
+	<button onclick="itemBuy()"> Buy an Item </button>
+	
+	<button onclick="clearList()"> Clear </button>
+    
+    <script>
+	
+	
+		var totalAmount = 0
+		
+		<!-- Buy Function -->
+		function itemBuy(){
+			var itemNum = parseInt(prompt("What item number will you buy? "));
+			var itemAmount = parseInt(prompt("How many of that item will you buy? "));
+			
+		<!-- Determining if given input is valid -->
+			if(isNaN(itemNum) || isNaN(itemAmount) || itemNum > 3 || itemNum < 1){
+				return alert("Please provide an appropriate respose");
+			} 
+			var totalPaid = 0;
+		<!-- Detecting which item is bought -->
+			if(itemNum == 1) {
+
+				<!-- Updating total amount to be paid -->
+				totalAmount += 1000*itemAmount;
+				
+				<!-- Total amount to be paid in the current purchase -->
+				totalPaid = 1000*itemAmount;
+				
+				<!-- Updating the HTML Tags -->
+				document.getElementById("item").innerHTML = "1";
+				document.getElementById("qty").innerHTML = itemAmount;
+				document.getElementById("bill").innerHTML = totalPaid;
+				document.getElementById("tbill").innerHTML = totalAmount;
+			}
+			if(itemNum == 2) {
+				
+				totalAmount += 50*itemAmount;
+				totalPaid = 50*itemAmount;
+				
+				document.getElementById("item").innerHTML = "2";
+				document.getElementById("qty").innerHTML = itemAmount;				
+				document.getElementById("bill").innerHTML = totalPaid;
+				document.getElementById("tbill").innerHTML = totalAmount;
+			}
+			if(itemNum == 3) {
+				totalAmount += 5000*itemAmount;
+				totalPaid = 5000*itemAmount;
+				
+				document.getElementById("item").innerHTML = "2";
+				document.getElementById("qty").innerHTML = itemAmount;				
+				document.getElementById("bill").innerHTML = totalPaid;
+				document.getElementById("tbill").innerHTML = totalAmount;
+			}						
+		
+		
+		}
+		function clearList(){
+			totalAmount = 0;
+			document.getElementById("item").innerHTML = "";
+			document.getElementById("qty").innerHTML = "";				
+			document.getElementById("bill").innerHTML = "";
+			document.getElementById("tbill").innerHTML = "";
+		
+		
+		}
+    
+    </script>
+</body>
+
+</html>
