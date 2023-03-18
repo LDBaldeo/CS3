@@ -1,84 +1,99 @@
 <!DOCTYPE html>
 <html>
-	<head> 
-		<title>  </title> 
+	<head>
+		<title>Numerology</title>
 			<meta charset="UTF-8"> 
 			<meta name="author" content="Lorenz Baldeo"> 
 			<meta name="keywords" content="HTML, CSS, JavaScript"> 
 			<link rel="icon" href="icon.png" type="image/gif"> 
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 1em; color: maroon}
+        </style>
+
 	</head>
-	<body>
-		<!-- HTML Portion  -->
-		<span id="thename">  </span> 
-		<span id="fortune">  </span>
-		
-		
-		
-		
-	<script>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick="nameInput()"> Click here to enter your name </button>
+    <script>
 	
-	<!-- Prompting the User's Name -->
-	var name = prompt("Enter your FULL name: ");
-	document.getElementById("thename").innerHTML = name;
-	
-	<!-- Converting the Length of the String into Individual digits -->
-	var nameLength = name.length;
-	
-	var stringName = nameLength.toString();
-	var digit1 = parseInt(stringName[0]);
-	var digit2 = parseInt(stringName[1]);
-	var nameSum = digit1+digit2;
-	
-	<!-- Checks if the sum of the digits is greater than 9 -->
-	if(nameSum>9) {
-		var stringName =  nameSum.toString();
-		var digit1 = parseInt(stringName[0]);
-		var digit2 = parseInt(stringName[1]);
-		var nameSum = digit1 + digit2;
-		}
-
-	<!-- Fortune Part -->
-	switch(nameSum){
-		case 1:
-			document.getElementById("fortune").innerHTML = "| Your Fortune: May makita kang 500 sa daan mamaya";
-			break;
-		case 2: 
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Flat wan ka sa CS";
-			break;
-		case 3: 
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Perfect Experimental Report niyo sa Statistics";
-			break;
-		case 4:
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Mamalasin ka ngayon";
-			break;
-		case 5:
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Mahal ka ni sir Jimmy 🥰🥰";
-			break;
-		case 6:
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Minus 10 ka sa Summative mo";
-			break;
-		case 7:
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Hindi ka mamatay ngayon 😁😁😁😁😁";
-			break;
-		case 8: 
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Crush ka ni king";
-			break;
-		case 9: 
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Walang ganap";
-			break;
-		case 0: 
-			document.getElementById("fortune").innerHTML = "| Your Fortune: Miss ko na siya";
-			break;
+	<!-- Name Declaration -->
+	var name = "";
+	function nameInput(){
+		name = prompt("Enter your name: ");
+		document.getElementById("thename").innerHTML = name;
+		
+		var nameLength = name.length;
+		var nameLengthString = nameLength.toString();
+		var numDigits = nameLengthString.length;
+		var sum = 0;
+		
+		<!-- Determines if there are more than 1 digit -->
+		while (numDigits > 1) {
+			sum = 0;
 			
-		<!-- If the number is 0 or greater than 9 -->
-		default:
-			document.getElementById("fortune").innerHTML = "Sure ka name mo yan?";
-			break;
-	
-	
-	}
-	
-	</script>
+			for (i = 0; i < numDigits; i++) {
+			sum = sum + parseInt(nameLengthString[i]);
+			}
+			
+			nameLengthString = sum.toString();
+			numDigits = nameLengthString.length;
+		}
+		
+		<!-- Updating the sum of the strings -->
+		nameLengthString = sum.toString();
+		var finalSum = parseInt(nameLengthString);
+		
+		<!-- Fortune part -->
+		switch(finalSum){
+			case 0:
+				document.getElementById("fortune").innerHTML = "Today is a Lucky Day";
+				break;
+			case 1:
+				document.getElementById("fortune").innerHTML = "It's a perfect time to do something new";
+				break;
+			case 2:
+				document.getElementById("fortune").innerHTML = "Now's the time to go somewhere";
+				break;
+			case 3:
+				document.getElementById("fortune").innerHTML = "Think twice before every decision, you'll regret it if you wont";
+				break;
+			case 4:
+				document.getElementById("fortune").innerHTML = "Inner peace awaits";
+				break;
+			case 5:
+				document.getElementById("fortune").innerHTML = "You deserve a good rest";
+				break;
+			case 6:
+				document.getElementById("fortune").innerHTML = "Today might not be the most favorable day for you..";
+				break;
+			case 7:
+				document.getElementById("fortune").innerHTML = "It's the perfect moment to bond with your family or your loved one";
+				break;
+			case 8:
+				document.getElementById("fortune").innerHTML = "A friend awaits from a distance";
+				break;
+			case 9:
+				document.getElementById("fortune").innerHTML = "Be careful who you talk to";
+				break;
+			default:
+				document.getElementById("fortune").innerHTML = "There seems to be a problem";
+		}
+		}
+		
+		
 
-	</body>
+		
+		
+    </script>
+    
+</body>
 </html>
