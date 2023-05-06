@@ -66,7 +66,7 @@
 			<legend> Sign-Up </legend>
 			<div>
 				<label for="firstName"> Name: </label> <br/>
-				<input type="text" id="firstName" name="firstName" placeholder="First Name" onblur="inputCheck(this.value, this.id)" required> <span> ⠀ </span>
+				<input type="text" id="firstName" name="firstName" placeholder="First Name" onblur="inputCheck(this.value, this.id)" required> <span> Рађ </span>
 				<input type="text" id="lastName" name="lastName" placeholder="Last Name" onblur="inputCheck(this.value, this.id)" required>
 			</div>
 			
@@ -136,7 +136,7 @@
 			
 			
 			<div>
-				<input type="reset" onclick="resetColor()">
+				<input type="reset" onclick="resetPage()">
 				<input type="submit">
 			</div>
 
@@ -178,7 +178,7 @@
 		}
 	}
 
-	function resetColor() {
+	function resetPage() {
 		document.getElementById("firstName").style.borderColor = "";
 		document.getElementById("lastName").style.borderColor = "";
 		document.getElementById("uName").style.borderColor = "";
@@ -187,6 +187,14 @@
 		document.getElementById("bio").style.borderColor = "";
 		document.getElementById("address").style.borderColor = "";
 		document.getElementById("gender").style.borderColor = "";
+		document.getElementById("firstNameA").innerHTML = "";
+		document.getElementById("lastNameA").innerHTML = "";
+		document.getElementById("uNameA").innerHTML = "";
+		document.getElementById("genderA").innerHTML = "";
+		document.getElementById("pWordA").innerHTML = "";
+		document.getElementById("eAddressA").innerHTML = "";
+		document.getElementById("bioA").innerHTML = "";
+		document.getElementById("addressA").innerHTML = "";
 	}
 	
 	function submitData() {
