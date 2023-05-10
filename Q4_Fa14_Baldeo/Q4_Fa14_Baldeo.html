@@ -9,6 +9,87 @@
 	</head>
 	
 	<style>
+
+	body {
+		background-color: #f2f2f2;
+		font-family: Arial, sans-serif;
+		background: linear-gradient(to right, cyan, mediumpurple);
+		margin-top: 50px;
+		margin: auto;
+		font-family: Arial;
+	}
+
+	form {
+		width: 60%;
+		margin: auto;
+		padding: 20px;
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	}
+
+
+	fieldset {
+		border: none;
+		padding: 0;
+	}
+
+	legend {
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+	
+	input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover{
+		background-color: #d1d1d1;
+		transition: 0.2s;
+
+	}
+	
+	input[type="text"], input[type="password"], input[type="email"]{
+		background-color: #ffffff;
+		transition: 0.2s;
+
+	}
+
+	input[type="text"], input[type="password"], input[type="email"], textarea, select {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+	}
+
+	input[type="submit"], input[type="reset"] {
+		background-color: #4CAF50;
+		color: #fff;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+		margin-right: 10px;
+	}
+
+	input[type="submit"]:hover, input[type="reset"]:hover {
+		background-color: #3e8e41;
+		transition: 0.2s;
+	}
+
+	.error {
+		color: red;
+		font-size: 14px;
+		margin-top: -10px;
+		margin-bottom: 10px;
+}
 	label {
 		font-weight: bold;
 	}
@@ -30,13 +111,6 @@
 		border: 2px solid gray;
 		border-radius: 5px;
 	}
-	
-	body {
-		background: linear-gradient(to left, cyan, mediumpurple);
-		margin-top: 50px;
-		margin: auto;
-		font-family: Arial;
-	}
 
 	form {
 		border: 2px solid gray;
@@ -55,7 +129,6 @@
 		margin-bottom: 20px;
 	}
 
-
 	</style>
 	
 	
@@ -66,7 +139,7 @@
 			<legend> Sign-Up </legend>
 			<div>
 				<label for="firstName"> Name: </label> <br/>
-				<input type="text" id="firstName" name="firstName" placeholder="First Name" onblur="inputCheck(this.value, this.id)" required> <span> ⠀ </span>
+				<input type="text" id="firstName" name="firstName" placeholder="First Name" onblur="inputCheck(this.value, this.id)" required> <span> Рађ </span>
 				<input type="text" id="lastName" name="lastName" placeholder="Last Name" onblur="inputCheck(this.value, this.id)" required>
 			</div>
 			
@@ -139,13 +212,16 @@
 				<input type="reset" onclick="resetPage()">
 				<input type="submit">
 			</div>
+			
+
 
 			</fieldset>
-
+			<br/>
 			<hr/>
 			
-			<fieldset>
-			<legend> Personal Summary </legend>
+			<div id="userInfo">
+			<fieldset id="userInfo">
+			<legend id="userInfo"> Personal Summary </legend> 
 
 			<div id="userInfo">
 			
@@ -159,6 +235,7 @@
 
 			</div>
 			</fieldset>
+			<div>
 	</form>	
 		
 	<script>
@@ -199,6 +276,7 @@
 	
 	function submitData() {
 		let x = document.getElementById("gender").value;
+		
 		if(x == "none"){
 			alert("Enter an Option for your Gender; If you Prefer not to Say, Choose the Fourth Option");
 			return false;
